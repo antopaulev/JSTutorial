@@ -26,6 +26,10 @@ switch (operator){
         result = num1 + num2 
         break
     case "/":
+        if (num2 === 0){
+            valid = false
+            console.log("Zero division Error !!!")
+        }
         result = num1 / num2
         break
     default:
