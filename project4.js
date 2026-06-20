@@ -26,10 +26,35 @@ function printBoard(board){
         }
         console.log(rowString)
         if ( i !== board.length -1)
-            console.log("----------")
+            console.log("-----------")
     }
 }
+function checkWin(board,turn){
+    const lists = [
+        [[0,0], [0,1], [0,2]],
+        [[1,0], [1,1], [1,2]],
+        [[2,0], [2,1], [2,2]],
+        [[0,0], [1,0], [2,0]],
+        [[0,1], [1,1], [2,1]],
+        [[0,2], [1,2], [2,2]], 
+        [[0,0], [1,1], [2,2]],
+        [[0,2], [1,1], [2,0]],
+    ]
+    for(let list of lists){
+        let win = true
+        for (let pos of list){
+            const [row,col] = pos
+            if (board[row][col] !== turn){
+                win = false
+                break
+            }
+        }
+        if (win)
+            return true
+    }
+    return false
 
+}
 
 
 const board = [
@@ -39,12 +64,24 @@ const board = [
 ]
 let turn = "X"
 let turnCount = 0
+let win = false
+printBoard(board)
+console.log()
 while(turnCount < 9 ){
+    console.log("its ur turn ",turn)
     makeMove(turn, board)
     printBoard(board)
+    console.log()
+    win = checkWin(board, turn)
+    if (win){
+        console.log( turn, "has won")
+        break
+    }
     if (turn === "X")
         turn = "O"
     else
         turn = "X"
     turnCount++;
 }
+if (!win)
+    console.log("tie game!!")
