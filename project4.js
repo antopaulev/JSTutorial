@@ -15,6 +15,22 @@ function makeMove(turn, board){
         }
     }
 }
+function printBoard(board){
+    for (let i = 0; i < board.length ; i++){
+        const row = board[i]
+        let rowString = ""
+        for (let j = 0; j < row.length; j++){
+            rowString += row[j]
+            if (j!== row.length - 1)
+                rowString += " | "
+        }
+        console.log(rowString)
+        if ( i !== board.length -1)
+            console.log("----------")
+    }
+}
+
+
 
 const board = [
     [" ", " ", " "],
@@ -25,14 +41,10 @@ let turn = "X"
 let turnCount = 0
 while(turnCount < 9 ){
     makeMove(turn, board)
-    console.log(board)
+    printBoard(board)
     if (turn === "X")
         turn = "O"
     else
         turn = "X"
     turnCount++;
 }
-makeMove("X", board)
-console.log(board)
-makeMove("O", board)
-console.log(board)
