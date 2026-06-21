@@ -1,0 +1,54 @@
+{
+  "questions": [
+    {
+      "question": "What is the largest planet in our solar system?",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "answer": "Jupiter"
+    },
+    {
+      "question": "Which element has the chemical symbol 'O'?",
+      "options": [
+        "Osmium",
+        "Oxygen",
+        "Gold",
+        "Silver"
+      ],
+      "answer": "Oxygen"
+    },
+    {
+      "question": "Who developed the theory of relativity?",
+      "options": [
+        "Isaac Newton",
+        "Nikola Tesla",
+        "Albert Einstein",
+        "Galileo Galilei"
+      ],
+      "answer": "Albert Einstein"
+    },
+    {
+      "question": "What is the capital city of Japan?",
+      "options": [
+        "Seoul",
+        "Beijing",
+        "Tokyo",
+        "Bangkok"
+      ],
+      "answer": "Tokyo"
+    },
+    {
+      "question": "Which programming language is primarily used for web page styling?",
+      "options": [
+        "HTML",
+        "Python",
+        "CSS",
+        "Java"
+      ],
+      "answer": "CSS"
+    }
+  ]
+}
